@@ -9,7 +9,9 @@ d = { 'hostname': 'router1', 'ip_address': '1.2.3.4',
 #Write it out to YAML file
 with open("week1.yaml", "w") as f:
     f.write(yaml.dump(d, default_flow_style=False))
+    f.close()
 
 #Write it out to json file
 with open("week1.json", "w") as f:
-    f.write(json.dump(d, f))
+    json.dump(d, f)
+    f.close()
