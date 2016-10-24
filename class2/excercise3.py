@@ -12,7 +12,7 @@ class Router:
     def __init__(self):
         pass
 
-    def send_command(remote_conn, cmd):
+    def send_command(self, remote_conn, cmd):
         '''
         Send a command down the telnet channel
 
@@ -23,7 +23,7 @@ class Router:
         time.sleep(1)
         return remote_conn.read_very_eager()
 
-    def login(remote_conn, username, password):
+    def login(self, remote_conn, username, password):
         '''
         Login to network device
         '''
@@ -33,21 +33,20 @@ class Router:
         remote_conn.write(password + '\n')
         return output
 
-    def disable_paging(remote_conn, paging_cmd='terminal length 0'):
+    def disable_paging(self, remote_conn, paging_cmd='terminal length 0'):
         '''
         Disable the paging of output (i.e. --More--)
         '''
-        return send_command(remote_conn, paging_cmd)
+        return self.send_command(remote_conn, paging_cmd)
 
-    def telnet_connect(ip_addr):
+    def telnet_connect(self, ip_addr):
         '''
         Establish telnet connection
         '''
         try:
             return telnetlib.Telnet(ip_addr, TELNET_PORT, TELNET_TIMEOUT)
         except socket.timeout:
-        sys.exit("Connection timed-out")
-
+            sys.exit("Connection timed-out")
 
 def main():
     '''
@@ -59,15 +58,15 @@ def main():
     username = 'pyclass'
     password = getpass.getpass()
 
-    r = Router()
-    remote_conn = r.telnet_connect(ip_addr)
-    output = r.login(remote_conn, username, password)
+    pynet_rtr1 = Router()
+    remote_conn = pynet_rtr1.telnet_connect(ip_addr)
+    output = pynet_rtr1.login(remote_conn, username, password)
 
     time.sleep(1)
     remote_conn.read_very_eager()
-    r.disable_paging(remote_conn)
+    pynet_rtr1.disable_paging(remote_conn)
 
-    output = r.send_command(remote_conn, 'show ip int brief')
+    output = pynet_rtr1.send_command(remote_conn, 'show ip int brief')
 
     print "\n\n"
     print output
