@@ -5,7 +5,7 @@ import pynet-lib,telnetlib, pysnmp
 
 def main():
     #Write program here
-
+    pass
 
 ##Only run if not called by another file/program
 if __name__ == "__main__":

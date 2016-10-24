@@ -1,0 +1,20 @@
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ ls
+excercise1.py  my_func.py
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ ./excercise1.py
+pysnmp version: 4.3.2
+paramiko version: 2.0.2
+hello
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ mv my_func.py ~/pylib/
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ echo $PYTHONPATH
+/home/jrogers/DJANGOX/djproject/:/home/jrogers/pylib
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ ./excercise1.py
+pysnmp version: 4.3.2
+paramiko version: 2.0.2
+hello
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ mv ~/pylib/my_func.py ~/applied_python/lib/python2.7/site-packages/
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ ./excercise1.py
+pysnmp version: 4.3.2
+paramiko version: 2.0.2
+hello
+(applied_python)[jrogers@ip-172-30-0-7 class2]$ mv ~/applied_python/lib/python2.7/site-packages/my_func.py .
+(applied_python)[jrogers@ip-172-30-0-7 class2]$
