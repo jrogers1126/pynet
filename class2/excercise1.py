@@ -9,6 +9,7 @@ print "pysnmp version: " + pysnmp.__version__
 print "paramiko version: " + paramiko.__version__ 
 
 #    c. Write a simple Python module that contains one function that prints 'hello' (module name = my_func.py). Do a test where you import my_func into a new Python script. 
+# 1. Tested local, 2. tested in ~/pylib using $PYTHONPATH, and 3. tested in ~/applied_python/lib/python2.7/site-packages
 from my_func import my_func
 
 def main():
