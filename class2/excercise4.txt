@@ -1,0 +1,6 @@
+################################## pynet-rtr1 ##################################
+SysName: pynet-rtr1.twb-tech.com
+SysDescr: Cisco IOS Software, C880 Software (C880DATA-UNIVERSALK9-M), Version 15.4(2)T1, RELEASE SOFTWARE (fc3)
+################################## pynet-rtr2 ##################################
+SysName: pynet-rtr2.twb-tech.com
+SysDescr: Cisco IOS Software, C880 Software (C880DATA-UNIVERSALK9-M), Version 15.4(2)T1, RELEASE SOFTWARE (fc3)
