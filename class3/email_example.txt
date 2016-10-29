@@ -1,0 +1,64 @@
+Delivered-To: 2016@tybox.net
+Received: by 10.202.85.143 with SMTP id j137csp1878051oib;
+        Sat, 29 Oct 2016 13:33:40 -0700 (PDT)
+X-Received: by 10.202.61.2 with SMTP id k2mr8070877oia.44.1477773220482;
+        Sat, 29 Oct 2016 13:33:40 -0700 (PDT)
+Return-Path: <josh+caf_=2016@tybox.net>
+Received: from mail-oi0-f52.google.com (mail-oi0-f52.google.com. [209.85.218.52])
+        by mx.google.com with ESMTPS id j75si11652284otj.289.2016.10.29.13.33.40
+        for <2016@tybox.net>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 29 Oct 2016 13:33:40 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning josh+caf_=2016@tybox.net does not designate 209.85.218.52 as permitted sender) client-ip=209.85.218.52;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning josh+caf_=2016@tybox.net does not designate 209.85.218.52 as permitted sender) smtp.mailfrom=josh+caf_=2016@tybox.net
+Received: by mail-oi0-f52.google.com with SMTP id 62so37949187oif.1
+        for <2016@tybox.net>; Sat, 29 Oct 2016 13:33:40 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20130820;
+        h=x-original-authentication-results:x-gm-message-state:delivered-to
+         :date:message-id:mime-version:content-transfer-encoding:subject:from
+         :to;
+        bh=R60rDCuL+H0IiCWzXag58mayAWeGPLMgQpc2Hj1SUVk=;
+        b=CpUL+AcNel8eE7238QOx0vAeaNDEtSh8eB289G1NaK1R5iUEQ4ggnPdbtXB1+wAhpq
+         4aXQ9WoATm2NLplzFHuAo/Ga0mziJGFgH6mbFMHx4dtNLMITH8i9GAu0kGLaYQ1Ip8Lm
+         GQqMTmBpB1uc5fzhCQ+ZT8Sh6v6Wq2AZ3BROo4sKQB3Pcyi/5x62JFc+WdkSE8hytt/j
+         3P5tZiTHAo3icBYfwkjUbTo32LU7g+91/cRx0u0fXryYa8foCVJ1W5rTsUihuEEp6KSI
+         WMQWpHhCoAPKibJTvnxq/EfZN0q/C6k7JCeffIHOj6GshEikp+Z4m1nCbJYonxuW+nM8
+         IctQ==
+X-Original-Authentication-Results: mx.google.com;
+       spf=fail (google.com: domain of config-watcher@py.net does not designate 52.8.70.38 as permitted sender) smtp.mailfrom=config-watcher@py.net
+X-Gm-Message-State: ABUngvcUFR60GTYfDm5w+CltbzRhOb4Ei4sR+u+67Xd9NtRBA/NHbYSmBKBzRzrPyl5t2/sJWfs6xuZ9CwFi3s+gwJm/yHg=
+X-Received: by 10.202.75.70 with SMTP id y67mr2538231oia.45.1477773220318;
+        Sat, 29 Oct 2016 13:33:40 -0700 (PDT)
+X-Forwarded-To: 2016@tybox.net
+Delivered-To: 2016@tybox.net
+Received: by 10.182.104.41 with SMTP id gb9csp1671939obb;
+        Sat, 29 Oct 2016 13:33:39 -0700 (PDT)
+X-Received: by 10.98.13.130 with SMTP id 2mr11875648pfn.182.1477773219771;
+        Sat, 29 Oct 2016 13:33:39 -0700 (PDT)
+Return-Path: <config-watcher@py.net>
+Received: from ip-172-30-0-7 (ec2-52-8-70-38.us-west-1.compute.amazonaws.com. [52.8.70.38])
+        by mx.google.com with ESMTPS id q21si462818pgi.63.2016.10.29.13.33.39
+        for <2016@tybox.net>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 29 Oct 2016 13:33:39 -0700 (PDT)
+Received-SPF: fail (google.com: domain of config-watcher@py.net does not designate 52.8.70.38 as permitted sender) client-ip=52.8.70.38;
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by ip-172-30-0-7 (8.14.4/8.14.4) with ESMTP id u9TKXc46018352 for <2016@tybox.net>; Sat, 29 Oct 2016 13:33:38 -0700
+Date: Sat, 29 Oct 2016 13:33:38 -0700
+Message-Id: <201610292033.u9TKXc46018352@ip-172-30-0-7>
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: CHANGE DETECTED: Config on pynet-rtr2.twb-tech.com detected at 2016-10-29 13:33:38
+From: config-watcher@py.net
+To: 2016@tybox.net
+
+Previous Config Timestamp: 985166928
+Current Config Timestamp: 985257002
+
+Newly Detected Config: 
+! Last configuration change at 13:30:28 PDT Sat Oct 29 2016 by pyclass
+! Last configuration change at 13:15:27 PDT Sat Oct 29 2016 by pyclass
+logging buffered 20000
+logging buffered 20010
