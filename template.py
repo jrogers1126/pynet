@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 ##Import stuff
 import pprint from pprint
-import pynet-lib,telnetlib, pysnmp
+#pynet.py is found in root git directory
+import pynet, telnetlib, pysnmp
 
 def main():
     #Write program here

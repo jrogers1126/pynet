@@ -28,6 +28,11 @@ import pysnmp, snmp_helper, yaml, email_helper, netmiko, time, datetime
     # get running config change timestamp (last_changed_net)
     # Load last checked running config timestamp (last_changed_yaml) from YAML file, default to epoc
     # if last_changed_net > last_changed_yaml, then: get config_net, compare to config_yaml, email diff, store config_net and last_changed_net in yaml file
+
+    To test:
+    echo ./excercise1.py | at now + 16 min
+    echo ./excercise1.py | at now + 31 min
+    echo ./excercise1.py | at now + 46 min
 '''
 OID_RUN_CHANGED = '1.3.6.1.4.1.9.9.43.1.1.1.0'
 OID_SYSNAME = '.1.3.6.1.2.1.1.5.0'
