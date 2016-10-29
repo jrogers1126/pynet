@@ -3,11 +3,10 @@
 
 ##Import stuff
 
-def hr(s, c='#'):
+def horizontal_rule(msg, character='#'):
     #not worth figuring the term width cross-platform, assume 80
     width = 80
-    padding = width - 2 - len(s)
-    print c.center(padding/2,c) + ' ' + s + ' ' + c.center(padding/2,c)
+    print " {} ".format(msg.strip()).center(width, character)
 
 ##Only run if not called by another file/program
 if __name__ == "__main__":
