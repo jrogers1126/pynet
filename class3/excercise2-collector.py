@@ -19,15 +19,6 @@ import pickle, pysnmp, snmp_helper, time, pprint
 
     The relevant OIDs are as follows:
 '''
-ifDescr_fa4 = '1.3.6.1.2.1.2.2.1.2.5'
-ifInOctets_fa4 = '1.3.6.1.2.1.2.2.1.10.5'
-ifInUcastPkts_fa4 = '1.3.6.1.2.1.2.2.1.11.5'
-ifOutOctets_fa4 = '1.3.6.1.2.1.2.2.1.16.5'
-ifOutUcastPkts_fa4 = '1.3.6.1.2.1.2.2.1.17.5'
-device = ('184.105.247.70',161)
-snmp_user = ('pysnmp', 'galileo1', 'galileo1')
-device_name = snmp_helper.snmp_extract(snmp_helper.snmp_get_oid_v3(device, snmp_user, oid='.1.3.6.1.2.1.1.5.0'))
-
 def main():
     #List of oid's to collect each polling
     OIDS = {
