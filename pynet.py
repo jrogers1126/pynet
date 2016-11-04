@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 #A library of stuff to use
 
-##Import stuff
+#import stuff
+from pysnmp.entity.rfc3413.oneliner import cmdgen
 
 def horizontal_rule(msg, character='#'):
     #not worth figuring the term width cross-platform, assume 80
