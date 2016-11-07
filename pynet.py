@@ -3,6 +3,11 @@
 
 #import stuff
 from pysnmp.entity.rfc3413.oneliner import cmdgen
+""" 
+    passwords.py is stored locally, and not in git for security reasons. 
+    It contains only one line:
+    passwords = [ 'firstpass', 'secondpass', 'maybeathird', 'etc' ]
+"""
 import passwords
 
 def horizontal_rule(msg, character='#'):
