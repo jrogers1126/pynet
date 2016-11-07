@@ -8,7 +8,7 @@ import passwords
 def horizontal_rule(msg, character='#'):
     #not worth figuring the term width cross-platform, assume 80
     width = 80
-    print " {} ".format(msg.strip()).center(width, character)
+    return " {} ".format(msg.strip()).center(width, character)
 
 rtr1 = { 
     #model: Cisco 881
