@@ -34,6 +34,7 @@ sw1 = {
     'port': 22,
     #'eapi_port': 443,
     'username': 'admin1',
+    'device_type': 'arista_eos',
     'password': passwords.passwords[1]
 }
 
@@ -43,6 +44,7 @@ sw2 = {
     'port': 22,
     #'eapi_port': 443,
     'username': 'admin1',
+    'device_type': 'arista_eos',
     'password': passwords.passwords[1]
 }
 
@@ -52,6 +54,7 @@ sw3 = {
     'port': 22,
     #'eapi_port': 443,
     'username': 'admin1',
+    'device_type': 'arista_eos',
     'password': passwords.passwords[1]
 }
 
@@ -61,6 +64,7 @@ sw4 = {
     'port': 22,
     #'eapi_port': 443,
     'username': 'admin1',
+    'device_type': 'arista_eos',
     'password': passwords.passwords[1]
 }
 
