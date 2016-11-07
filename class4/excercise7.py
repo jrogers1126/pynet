@@ -8,12 +8,12 @@ import pynet, random
 def main():
     buffersize = random.randrange(4096, 9096) 
     net_connect = ConnectHandler(**pynet.rtr2)
-    pynet.horizontal_rule( "Checking current config" )
+    print pynet.horizontal_rule( "Checking current config" )
     print net_connect.send_command('show run | inc logging')
-    pynet.horizontal_rule("Entering config mode and changing config" )
+    print pynet.horizontal_rule("Entering config mode and changing config" )
     net_connect.config_mode()
     net_connect.send_command('logging buffered ' + str(buffersize))
-    pynet.horizontal_rule( "checking new config" )
+    print pynet.horizontal_rule( "checking new config" )
     net_connect.exit_config_mode()
     print net_connect.send_command('show run | inc logging')
 

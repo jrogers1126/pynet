@@ -11,13 +11,13 @@ def main():
     rtr1 = ConnectHandler(**pynet.rtr1)
     rtr2 = ConnectHandler(**pynet.rtr2)
     srx1 = ConnectHandler(**pynet.srx1)
-    pynet.horizontal_rule("rtr1")
+    print pynet.horizontal_rule("rtr1")
     print rtr1.find_prompt() + ios_arp
     print rtr1.send_command(ios_arp)
-    pynet.horizontal_rule("rtr2")
+    print pynet.horizontal_rule("rtr2")
     print rtr2.find_prompt() + ios_arp
     print rtr1.send_command(ios_arp)
-    pynet.horizontal_rule("srx1")
+    print pynet.horizontal_rule("srx1")
     print srx1.find_prompt() + junos_arp
     print srx1.send_command(junos_arp)
 

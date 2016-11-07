@@ -17,7 +17,7 @@ def showCommand(hostname, cmd):
         outside the process management
     """
     net_connect = ConnectHandler(**eval('pynet.' + hostname))
-    pynet.horizontal_rule(hostname)
+    print pynet.horizontal_rule(hostname)
     print net_connect.find_prompt() + cmd
     print net_connect.send_command(cmd)
     return
