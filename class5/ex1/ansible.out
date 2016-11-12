@@ -1,0 +1,16 @@
+
+PLAY [local] *******************************************************************
+
+TASK [setup] *******************************************************************
+ok: [localhost]
+
+TASK [Generate configuration file {{item}}] ************************************
+ok: [localhost] => (item=1)
+ok: [localhost] => (item=2)
+ok: [localhost] => (item=3)
+ok: [localhost] => (item=4)
+ok: [localhost] => (item=5)
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+
