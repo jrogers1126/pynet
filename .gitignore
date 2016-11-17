@@ -1,4 +1,12 @@
+passwords.py
 */assignment.txt
+
+#Ansible
+*.retry
+
+#VIM
+*.swp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

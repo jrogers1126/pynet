@@ -1,0 +1,6 @@
+---
+- name: Generate configuration file
+  template: >
+    src=switch.j2
+    dest={{ ansible_env.PWD }}/{{item.hostname}}.cfg
+  with_items: "{{ switches }}"

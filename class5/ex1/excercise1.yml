@@ -1,0 +1,11 @@
+---
+- hosts: local
+  vars:
+    hostname: pynet-rtr{{item}}
+    ip_addr: 10.10.{{item}}.1
+    default_gateway: 10.10.{{item}}.254
+  tasks: 
+    - name: Generate configuration file {{item}}
+      template: src=excercise1.j2
+                  dest=ex1-rtr{{item}}.cfg
+      with_sequence: count=5

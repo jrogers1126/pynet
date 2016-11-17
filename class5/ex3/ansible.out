@@ -1,0 +1,16 @@
+
+PLAY [Generate configuration file] *********************************************
+
+TASK [setup] *******************************************************************
+ok: [localhost]
+
+TASK [switch : Generate configuration file] ************************************
+ok: [localhost] => (item={u'SNMPv3': False, u'hostname': u'pynet-rtr1', u'ip_addr': u'10.10.1.1', u'default_gateway': u'10.10.1.254'})
+ok: [localhost] => (item={u'SNMPv3': False, u'hostname': u'pynet-rtr2', u'ip_addr': u'10.10.2.1', u'default_gateway': u'10.10.2.254'})
+ok: [localhost] => (item={u'SNMPv3': False, u'hostname': u'pynet-rtr3', u'ip_addr': u'10.10.3.1', u'default_gateway': u'10.10.3.254'})
+ok: [localhost] => (item={u'SNMPv3': False, u'hostname': u'pynet-rtr4', u'ip_addr': u'10.10.4.1', u'default_gateway': u'10.10.4.254'})
+ok: [localhost] => (item={u'SNMPv3': True, u'hostname': u'pynet-rtr5', u'ip_addr': u'10.10.5.1', u'default_gateway': u'10.10.5.254'})
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+
