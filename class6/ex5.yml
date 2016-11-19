@@ -1,0 +1,16 @@
+---
+
+- name: transfer a small file to pynet-rtr1 
+  hosts: pynet-rtr1
+  gather_facts: false
+
+  tasks:
+  - name: Transfer josh.txt
+    cisco_file_transfer:
+      source_file="/home/jrogers/ANSIBLE/class6/josh.txt"
+      dest_file=josh.txt
+      overwrite=true
+      enable_scp=true
+      host={{ host }}
+      username={{ username }}
+      password={{ password }}
