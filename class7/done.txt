@@ -1,0 +1,1 @@
+excercise 3 was too tough.  I wasn't able to see the 'ansible way' to read in the yaml
