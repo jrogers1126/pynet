@@ -1,0 +1,155 @@
+************* Module ex1
+C:  4, 0: Trailing whitespace (trailing-whitespace)
+C: 12, 0: Trailing whitespace (trailing-whitespace)
+C: 16, 0: Trailing whitespace (trailing-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  6, 0: Invalid constant name "sw2" (invalid-name)
+C:  8, 0: Invalid constant name "interfaces" (invalid-name)
+************* Module ex2
+C:  4, 0: Trailing whitespace (trailing-whitespace)
+C: 15, 0: Line too long (129/100) (line-too-long)
+C: 16, 0: Line too long (115/100) (line-too-long)
+C: 18, 0: Line too long (173/100) (line-too-long)
+C: 46, 0: Line too long (149/100) (line-too-long)
+C: 61, 0: Trailing whitespace (trailing-whitespace)
+C: 64, 0: Line too long (112/100) (line-too-long)
+C: 70, 0: Trailing newlines (trailing-newlines)
+C:  1, 0: Missing module docstring (missing-docstring)
+C:  2, 0: Multiple imports on one line (pyeapi, sys, argparse, pprint) (multiple-imports)
+C:  6, 0: Missing function docstring (missing-docstring)
+C: 13, 0: Missing function docstring (missing-docstring)
+E: 28,38: Undefined variable 'vlan_id' (undefined-variable)
+W: 32,12: Unnecessary pass statement (unnecessary-pass)
+C: 39, 0: Missing function docstring (missing-docstring)
+C: 44, 0: Missing function docstring (missing-docstring)
+C: 50, 0: Missing function docstring (missing-docstring)
+W:  2, 0: Unused import pprint (unused-import)
+W:  4, 0: Unused import pynet (unused-import)
+C:  2, 0: standard import "import pyeapi, sys, argparse, pprint" comes before "import pyeapi, sys, argparse, pprint" (wrong-import-order)
+C:  2, 0: standard import "import pyeapi, sys, argparse, pprint" comes before "import pyeapi, sys, argparse, pprint" (wrong-import-order)
+C:  2, 0: standard import "import pyeapi, sys, argparse, pprint" comes before "import pyeapi, sys, argparse, pprint" (wrong-import-order)
+
+
+Report
+======
+63 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |2      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |0      |NC         |NC         |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|method   |0      |NC         |NC         |0           |0        |
++---------+-------+-----------+-----------+------------+---------+
+|function |5      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    pyeapi (ex2,ex1)
+    pynet (ex2,ex1)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |68     |77.27 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |0      |0.00  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |10     |11.36 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |10     |11.36 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |24     |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |0      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |3      |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |1      |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-------+-------+--------+---------+-----------+
+|module |error  |warning |refactor |convention |
++=======+=======+========+=========+===========+
+|ex2    |100.00 |100.00  |0.00     |75.00      |
++-------+-------+--------+---------+-----------+
+|ex1    |0.00   |0.00    |0.00     |25.00      |
++-------+-------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------+------------+
+|message id          |occurrences |
++====================+============+
+|missing-docstring   |7           |
++--------------------+------------+
+|trailing-whitespace |5           |
++--------------------+------------+
+|line-too-long       |5           |
++--------------------+------------+
+|wrong-import-order  |3           |
++--------------------+------------+
+|unused-import       |2           |
++--------------------+------------+
+|invalid-name        |2           |
++--------------------+------------+
+|unnecessary-pass    |1           |
++--------------------+------------+
+|undefined-variable  |1           |
++--------------------+------------+
+|trailing-newlines   |1           |
++--------------------+------------+
+|multiple-imports    |1           |
++--------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 4.92/10
+
