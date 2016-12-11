@@ -5,22 +5,17 @@ from netmiko import ConnectHandler
 #pynet.py is found in root git directory
 import pynet
 
+arp_map = {"cisco_ios": "show ip arp",
+           "juniper": "show arp no-resolve"}
+           
 def main():
-    ios_arp = "show ip arp"
-    junos_arp = "show arp no-resolve"
-    rtr1 = ConnectHandler(**pynet.rtr1)
-    rtr2 = ConnectHandler(**pynet.rtr2)
-    srx1 = ConnectHandler(**pynet.srx1)
-    print pynet.horizontal_rule("rtr1")
-    print rtr1.find_prompt() + ios_arp
-    print rtr1.send_command(ios_arp)
-    print pynet.horizontal_rule("rtr2")
-    print rtr2.find_prompt() + ios_arp
-    print rtr1.send_command(ios_arp)
-    print pynet.horizontal_rule("srx1")
-    print srx1.find_prompt() + junos_arp
-    print srx1.send_command(junos_arp)
-
+    for device in (pynet.rtr1, pynet.rtr2, pynet.srx1):
+        device_handler = ConnectHandler(**device) 
+        print (" " + device['ip'] + " ").center(80, "*")
+        print device_handler.find_prompt() + device['device_type']
+        print device_handler.send_command(arp_map[device['device_type']])
+        print ""
+ 
 ##Only run if not called by another file/program
 if __name__ == "__main__":
     main()
