@@ -1,0 +1,20 @@
+--- 
+
+- name: Configure Primary Ethernet Interface as Access
+  hosts: arista
+
+  tasks:
+    - name: Setting Ethernet3 Description
+      eos_interface: name=Ethernet3 description="***Testing***"
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          transport=https
+
+    - name: Set Ethernet3 to access mode, Vlan 710
+      eos_switchport: name=Ethernet3 mode=access access_vlan=710
+          username={{ eapi_username }}
+          password={{ eapi_password }}
+          host={{ eapi_hostname }}
+          transport=https
+

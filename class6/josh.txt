@@ -1,0 +1,3 @@
+!this file has been uploaded to pynet-rtr1 by Josh
+logging buffered 12345
+no logging console
