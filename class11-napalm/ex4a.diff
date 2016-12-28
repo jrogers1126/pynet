@@ -1,0 +1,16 @@
+@@ -20,6 +20,15 @@
+ username pyclass privilege 15 secret 5 $1$zYoWzly4$vI70m.NhePSpHOOKaKFIl/
+ !
+ clock timezone America/Los_Angeles
++!
++vlan 41
++   name seafoam
++!
++vlan 45
++   name violet
++!
++vlan 52
++   name perrywinkle
+ !
+ vlan 801
+    name blue

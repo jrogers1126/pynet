@@ -1,0 +1,19 @@
+---
+#Create a text file corresponding to three VLANs that you want to configure on one of the four Arista switches.
+#Choose random VLANS between 100 and 999.
+#Use NAPALM and Ansible to push this configuration change (merge operation). Manually check the diff file before performing the commit.
+- name: Arista interfaces and bgp neighbors
+  hosts: pynet-sw2
+  tasks:
+    - name: Commit the change
+      napalm_install_config:
+        hostname: "{{ eapi_hostname }}"
+        username: "{{ eapi_username }}"
+        password: "{{ eapi_password }}"
+        dev_os: eos
+        config_file: ex4.conf
+        commit_changes: True
+        replace_config: False
+        get_diffs: True
+        diff_file: "ex4b.diff"
+
