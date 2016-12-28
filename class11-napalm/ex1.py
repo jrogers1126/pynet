@@ -4,7 +4,6 @@ Connect to set of network devices using NAPALM (different platforms); print
 out the facts.
 """
 from napalm import get_network_driver
-import pynet
 from getpass import getpass
 
 def main():
@@ -12,12 +11,27 @@ def main():
     Connect to set of network devices using NAPALM (different platforms); print
     out the facts.
     """
+
+    std_pwd = getpass("Enter standard password: ")
+    arista_pwd = getpass("Enter Arista password: ")
+
+    srx2 = {
+            'hostname': '127.0.0.1',
+            'username': 'pyclass',
+            'device_type': 'juniper',
+            'password': std_pwd,
+            'optional_args': {
+                'port': 2222
+            }    
+    }
+
     device_list = [
-        pynet.rtr1,
-        pynet.rtr2,
-        pynet.sw1,
-        pynet.sw2,
-        pynet.srx1,
+        #rtr1,
+        #rtr2,
+        #sw1,
+        #sw2,
+        #srx1,
+        srx2,
     ]
     for a_device in device_list:
         device_type = a_device.pop('device_type')
