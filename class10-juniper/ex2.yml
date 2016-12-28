@@ -2,9 +2,23 @@
 - name: Change hostname using curly braces
   hosts: pynet-sf-srx
   tasks:
-          - name: Verifying NETCONF
-            wait_for: host={{ ansible_ssh_host }} port=830
+    - name: Verifying NETCONF
+      wait_for: host={{ ansible_ssh_host }} port=830
 
-          - name: Change Hostname
-            junos_install_config: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_passwd }} ex2.conf overwrite=false
+    - name: Retrieve Juniper Facts
+      junos_get_facts: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_passwd }}
+      register: pre
+
+    - name: Print Current Hostname 
+      debug: msg={{ pre.facts.hostname }}
+
+    - name: Change Hostname
+      junos_install_config: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_passwd }} file=ex2.conf overwrite=false
+ 
+    - name: Retrieve Juniper Facts
+      junos_get_facts: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_passwd }}
+      register: post
+
+    - name: Print New Hostname
+      debug: msg={{ post.facts.hostname }}
 
